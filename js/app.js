@@ -18,7 +18,7 @@ $(document).ready(function(){
     $(".date").before(times);
 
     //春节倒计时
-    var starttime = new Date("2021/2/12");
+    var starttime = new Date("2021/1/1");
     setInterval(function () {
         var nowtime = new Date();
         var time = starttime - nowtime;
@@ -28,7 +28,7 @@ $(document).ready(function(){
         var seconds = parseInt(time / 1000 % 60);
         
         var syday = "<span>" + hour + "</span>" + "小时" + "<span>" + minute + "</span>" + "分钟" + "<span class='Lose'>" + seconds + "</span>" + "秒";
-        $('.time').html("<p>除夕倒计时</p>" + "<p><span>" + day + "</span>" + "天</p>");
+        $('.time').html("<p>2021新年倒计时</p>" + "<p><span>" + day + "</span>" + "天</p>");
         $(".sydate").html(syday);
         
     }, 1000);
@@ -209,7 +209,7 @@ $(document).ready(function(){
             
             wx.updateAppMessageShareData({ 
                 title: 'Hello, 2021 happy new year', // 分享标题
-                desc: '你好, 2021, 新年快乐！ 除夕倒计时, 一大波弹幕正在来袭！！', // 分享描述
+                desc: '你好, 2021, 新年快乐！ 元旦倒计时, 一大波弹幕正在来袭！！', // 分享描述
                 imgUrl: 'https://www.shuhaisc.com/Clock/images/time.jpg', // 分享图标
                 success: function () {
                     // alert("分享成功!");
